@@ -12,7 +12,7 @@ local map = vim.api.nvim_set_keymap
 
 map("i", "jk", "<Esc>", opt)
 -- nvim-tree
-map("n", "<leader>n", ":NvimTreeToggle<CR>", opt)
+map("n", "<leader>ft", ":NvimTreeToggle<CR>", opt)
 -- toggleterm
 map("n", "<leader>g", ":ToggleTerm<CR>", opt)
 map("t", "jk", "<C-\\><C-n>", opt)

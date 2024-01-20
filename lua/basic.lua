@@ -22,3 +22,4 @@ vim.bo.autoindent = true
 vim.o.smartindent = true
 -- 配置剪切板
 opt.clipboard = "unnamedplus"
+-- 主题
