@@ -14,8 +14,8 @@ map("i", "jk", "<Esc>", opt)
 -- nvim-tree
 map("n", "<leader>ft", ":NvimTreeToggle<CR>", opt)
 -- toggleterm
-map("n", "<leader>g", ":ToggleTerm<CR>", opt)
-map("t", "jk", "<C-\\><C-n>", opt)
+map("n", "gg", ":ToggleTerm direction=float name=desktop<CR>i<Del>clear<CR>clear<CR>", opt)
+map("t", "jk", "<C-\\><C-n>:ToggleTerm<CR>", opt)
 -- 上下滚动浏览
 map("n", "<C-j>", "5j", opt)
 map("n", "<C-k>", "5k", opt)
