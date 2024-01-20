@@ -12,6 +12,8 @@ local map = vim.api.nvim_set_keymap
 
 map("i", "jk", "<Esc>", opt)
 map("v", "jk", "<Esc>", opt)
+-- 粘贴
+map("i", "pp", "<Esc>pi", opt)
 -- nvim-tree
 map("n", "<leader>ft", ":NvimTreeToggle<CR>", opt)
 -- toggleterm
@@ -22,6 +24,8 @@ map("n", "<C-j>", "5j", opt)
 map("n", "<C-k>", "5k", opt)
 map("v", "<C-j>", "5j", opt)
 map("v", "<C-k>", "5k", opt)
+map("n", "J", "5j", opt)
+map("n", "K", "5k", opt)
 -- <leader> + hjkl 窗口之间跳转
 map("n", "<leader>h", "<C-w>h", opt)
 map("n", "<leader>j", "<C-w>j", opt)
@@ -32,8 +36,8 @@ map("n", "<leader>sv", "<C-w>v", opt)
 map("n", "<leader>sh", "<C-w>s", opt)
 -- bufferline
 -- 左右Tab切换
-map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
-map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
+map("n", "H", ":BufferLineCyclePrev<CR>", opt)
+map("n", "L", ":BufferLineCycleNext<CR>", opt)
 -- 关闭当前
 map("n", "sc", "<C-w>c", opt)
 -- 关闭当前 buffer
@@ -43,3 +47,8 @@ map("n", "<leader>nh", ":nohl<CR>", opt)
 -- 单行或多行移动
 map("v", "J", ":m '>+1<CR>gv=gv", opt)
 map("v", "K", ":m '>-2<CR>gv=gv", opt)
+-- 跳到行首行尾
+map("i", "<C-h>", "<ESC>I", opt)
+map("i", "<C-l>", "<ESC>A", opt)
+map("n", "<C-h>", "0", opt)
+map("n", "<C-l>", "$", opt)
