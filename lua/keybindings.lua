@@ -11,6 +11,7 @@ local opt = {
 local map = vim.api.nvim_set_keymap
 
 map("i", "jk", "<Esc>", opt)
+map("v", "jk", "<Esc>", opt)
 -- nvim-tree
 map("n", "<leader>ft", ":NvimTreeToggle<CR>", opt)
 -- toggleterm
@@ -26,6 +27,9 @@ map("n", "<leader>h", "<C-w>h", opt)
 map("n", "<leader>j", "<C-w>j", opt)
 map("n", "<leader>k", "<C-w>k", opt)
 map("n", "<leader>l", "<C-w>l", opt)
+-- 新增窗口
+map("n", "<leader>sv", "<C-w>v", opt)
+map("n", "<leader>sh", "<C-w>s", opt)
 -- bufferline
 -- 左右Tab切换
 map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
@@ -34,3 +38,8 @@ map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
 map("n", "sc", "<C-w>c", opt)
 -- 关闭当前 buffer
 map("n", "<leader>bc", ":bdelete %<CR>", opt)
+-- 取消高亮
+map("n", "<leader>nh", ":nohl<CR>", opt)
+-- 单行或多行移动
+map("v", "J", ":m '>+1<CR>gv=gv", opt)
+map("v", "K", ":m '>-2<CR>gv=gv", opt)

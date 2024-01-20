@@ -24,3 +24,17 @@ vim.o.smartindent = true
 opt.clipboard = "unnamedplus"
 -- 主题
 opt.termguicolors = true
+-- 关闭新行注释
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+    pattern = "*",
+    callback = function()
+        vim.opt.formatoptions = vim.opt.formatoptions - { "c", "r", "o" }
+    end,
+})
+-- 自动保存
+vim.api.nvim_create_autocmd({ "InsertLeave" }, {
+  callback = function()
+  vim.fn.execute("silent! write")
+  vim.notify("Autosaved!", vim.log.levels.INFO, {})
+  end,
+})
