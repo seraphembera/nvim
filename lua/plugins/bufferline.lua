@@ -7,6 +7,7 @@ return
    config = function()
      require("bufferline").setup{
         options = {
+          close_command = "BufDel",
         -- 左侧让出 nvim-tree 的位置
         offsets = {{
             filetype = "NvimTree",
