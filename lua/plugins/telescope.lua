@@ -8,8 +8,13 @@ return
         defaults = {
             mappings = {
               i = {
-                ["jk"] = actions.close
-              }
+                ["o"] = actions.select_default,
+                ["<Space>jk"] = actions.close,
+              },
+              n = {
+                ["o"] = actions.select_default,
+                ["<Space>jk"] = actions.close,
+              },
             }
           },
        }
