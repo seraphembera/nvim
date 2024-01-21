@@ -50,7 +50,7 @@ map("n", "<C-l>", "$", opt)
 map("n", "H", ":BufferLineCyclePrev<CR>", opt)
 map("n", "L", ":BufferLineCycleNext<CR>", opt)
 -- 关闭当前 buffer
-map("n", "<leader>bc", ":bdelete %<CR>", opt)
+map("n", "<leader>bc", ":BufDel<CR>", opt)
 -- nvim-tree
 map("n", "<leader>ft", ":NvimTreeToggle<CR>", opt)
 -- toggleterm
