@@ -35,10 +35,10 @@ map("n", "<leader>l", "<C-w>l", opt)
 map("n", "<leader>sv", "<C-w>v", opt)
 map("n", "<leader>sh", "<C-w>s", opt)
 -- 窗口大小控制
-map("n", "sh", ":vertical resize -2<CR>", opt)
-map("n", "sl", ":vertical resize +2<CR>", opt)
-map("n", "sj", ":resize -2<CR>", opt)
-map("n", "sk", ":resize +2<CR>", opt)
+map("n", "<C-Left>", ":vertical resize -2<CR>", opt)
+map("n", "<C-Right>", ":vertical resize +2<CR>", opt)
+map("n", "<C-Down>", ":resize +2<CR>", opt)
+map("n", "<C-Up>", ":resize -2<CR>", opt)
 -- bufferline
 -- 左右Tab切换
 map("n", "H", ":BufferLineCyclePrev<CR>", opt)
