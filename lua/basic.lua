@@ -13,9 +13,9 @@ opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
--- 空格代替Tab
-vim.o.expandtab = true
-vim.bo.expandtab = true
+-- 空格代替Tab --暂时不用这个
+-- vim.o.expandtab = true
+-- vim.bo.expandtab = true
 -- 新行对齐当前行
 vim.o.autoindent = true
 vim.bo.autoindent = true

@@ -12,7 +12,7 @@ local map = vim.api.nvim_set_keymap
 -- 退出
 map("i", "jk", "<Esc>", opt)
 -- 粘贴
-map("i", "pp", "<Esc>pi", opt)
+map("i", "<leader>p", "<Esc>pi", opt)
 -- 上下滚动浏览
 map("n", "<C-j>", "5j", opt)
 map("n", "<C-k>", "5k", opt)
