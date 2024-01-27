@@ -22,6 +22,8 @@ vim.bo.autoindent = true
 vim.o.smartindent = true
 -- 配置剪切板
 opt.clipboard = "unnamedplus"
+-- 使用增强状态栏插件后不再需要 vim 的模式提示
+opt.showmode = false
 -- 主题
 opt.termguicolors = true
 -- 关闭新行注释
