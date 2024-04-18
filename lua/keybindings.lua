@@ -9,6 +9,7 @@ local opt = {
 
 --本地变量
 local map = vim.api.nvim_set_keymap
+local keyset = vim.keymap.set
 -- 退出
 map("i", "jk", "<Esc>", opt)
 -- 粘贴
