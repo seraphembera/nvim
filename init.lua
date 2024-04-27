@@ -2,9 +2,9 @@
 require("basic")
 -- 快捷键映射
 require("keybindings")
--- coc配置
-require("coc-config")
--- markdown-preview配置
--- require("markdown-preview-config")
+-- 插件配置
+require("config.coc-config")
+require("config.nvim-tree-config")
+
 -- lazy
 require("lazynvim-init")

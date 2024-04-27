@@ -12,15 +12,17 @@ local map = vim.api.nvim_set_keymap
 local keyset = vim.keymap.set
 -- 退出
 map("i", "jk", "<Esc>", opt)
+map("v", "<leader>jk", "<Esc>", opt)
+map("c", "jk", "<C-\\><C-n><Esc>", opt)
 -- 粘贴
-map("i", "<leader>p", "<Esc>pi", opt)
+map("i", "<C-p>", "<Esc>pi", opt)
 -- 上下滚动浏览
 map("n", "<C-j>", "5j", opt)
 map("n", "<C-k>", "5k", opt)
+map("n", "J", "<Nop>", opt)
+map("n", "K", "<Nop>", opt)
 map("v", "<C-j>", "5j", opt)
 map("v", "<C-k>", "5k", opt)
-map("n", "J", "5j", opt)
-map("n", "K", "5k", opt)
 -- <leader> + hjkl 窗口之间跳转
 map("n", "<leader>h", "<C-w>h", opt)
 map("n", "<leader>j", "<C-w>j", opt)
@@ -53,9 +55,9 @@ map("n", "L", ":BufferLineCycleNext<CR>", opt)
 -- 关闭当前 buffer
 map("n", "<leader>bc", ":BufDel<CR>", opt)
 -- nvim-tree
-map("n", "<leader>ft", ":NvimTreeToggle<CR>", opt)
+map("n", "tt", ":NvimTreeToggle<CR>", opt)
 -- toggleterm
-map("n", "gg", ":ToggleTerm direction=float name=desktop<CR>i<Del>clear<CR>clear<CR>", opt)
+map("n", "gg", ":ToggleTerm direction=float <CR>i<Del>clear<CR>clear<CR>", opt)
 map("t", "jk", "<C-\\><C-n>:ToggleTerm<CR>", opt)
 -- telescope
 map("n", "<leader>ff", [[<cmd>lua require('telescope.builtin').find_files()<cr>]], {})
