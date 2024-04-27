@@ -64,3 +64,5 @@ map("n", "<leader>fb", [[<cmd>lua require('telescope.builtin').buffers()<cr>]], 
 map("n", "<leader>fh", [[<cmd>lua require('telescope.builtin').help_tags()<cr>]], {})
 -- comment
 map("n", "gx", "gcc", opt)
+-- markdown-preview
+map("n", "<leader>m", ":NvimTreeClose<CR>:MarkdownPreviewToggle<CR>", opt)
