@@ -4,23 +4,29 @@ return
   main = "ibl",
   opts = 
   {
-    exclude = 
-    {
-      filetypes = 
-      {
-          "dashboard",
-          "terminal",
-          "help",
-          "log",
-          "markdown",
-          "TelescopePrompt",
-       }
-    }
   },
   config = function()
     require("ibl").setup(
       {
-        scope = { enabled = false }
+        scope = { enabled = false },
+        exclude = {
+          buftypes = {
+              'nofile',
+              'terminal',
+          },
+          filetypes = {
+              'help',
+              'startify',
+              'log',
+              'dashboard',
+              'Lazy',
+              'neogitstatus',
+              'NvimTree',
+              'neo-tree',
+              'Trouble',
+              "TelescopePrompt",
+          },
+        }
       }
     )
   end,
