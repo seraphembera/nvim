@@ -36,7 +36,7 @@ return
               },
               {
                   icon = " ",
-                  desc = "Edit preferences   ",
+                  desc = "Find files",
                   key = 'f',
                   action = "Telescope find_files",
               },

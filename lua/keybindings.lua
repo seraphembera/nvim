@@ -31,6 +31,7 @@ map("n", "<leader>l", "<C-w>l", opt)
 -- 新增窗口
 map("n", "<leader>sv", "<C-w>v", opt)
 map("n", "<leader>sh", "<C-w>s", opt)
+map("n", "<leader>s", "Nop", opt)
 -- 窗口大小控制
 map("n", "<C-Left>", ":vertical resize -2<CR>", opt)
 map("n", "<C-Right>", ":vertical resize +2<CR>", opt)
@@ -64,7 +65,16 @@ map("n", "<leader>ff", [[<cmd>lua require('telescope.builtin').find_files()<cr>]
 map("n", "<leader>fg", [[<cmd>lua require('telescope.builtin').live_grep()<cr>]], {})
 map("n", "<leader>fb", [[<cmd>lua require('telescope.builtin').buffers()<cr>]], {})
 map("n", "<leader>fh", [[<cmd>lua require('telescope.builtin').help_tags()<cr>]], {})
+map("n", "<leader>fo", ":Telescope oldfiles<CR>", {})
 -- comment
 map("n", "gx", "gcc", opt)
 -- markdown-preview
-map("n", "<leader>m", ":NvimTreeClose<CR>:MarkdownPreviewToggle<CR>", opt)
+vim.cmd('autocmd FileType * lua setKeybinds()')
+  function setKeybinds()
+    local fileTy = vim.api.nvim_buf_get_option(0, "filetype")
+    
+    if fileTy == 'markdown' then
+      map("n", "mm", ":NvimTreeClose<CR>:MarkdownPreviewToggle<CR>", opt)
+    elseif fileTy == 'sh' then
+    end
+end
