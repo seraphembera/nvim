@@ -44,7 +44,7 @@ map("n", "<leader>nh", ":nohl<CR>", opt)
 -- 单行或多行移动
 map("v", "J", ":m '>+1<CR>gv=gv", opt)
 map("v", "K", ":m '<-2<CR>gv=gv", opt)
--- 跳到行首行尾
+-- 跳到行首或行尾
 map("i", "<C-h>", "<ESC>I", opt)
 map("i", "<C-l>", "<ESC>A", opt)
 map("n", "<C-h>", "0", opt)

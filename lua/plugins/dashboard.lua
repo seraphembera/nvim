@@ -41,6 +41,12 @@ return
                   action = "Telescope find_files",
               },
               {
+                icon = " ",
+                desc = "Leetcode",
+                key = 'l',
+                action = "Leet",
+              },
+              {
                   icon = " ",
                   desc = "Recent",
                   key = 'r',

@@ -6,7 +6,7 @@ return
      
      ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "make", "asm", "cpp", "cmake"},
      sync_install = false,
-     auto_install = true,
+     auto_install = false,
    
      ignore_install = { "javascript" },
    
